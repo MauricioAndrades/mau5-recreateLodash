@@ -9,7 +9,7 @@ _.first = function() {
 	// Place your solution here
 };
 
- // returns the first n number of elements in an array.
+ // Returns the first n number of elements in an array.
 _.take = function() {
 	// Place your solution here
 };
@@ -19,7 +19,7 @@ _.last = function() {
 	// Place your solution here
 };
 
-// returns the last n number of elements in an array.
+// Returns the last n number of elements in an array.
 _.takeRight = function() {
 	// Place your solution here
 };
