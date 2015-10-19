@@ -15,5 +15,10 @@
     "lodash"
   ],
   "author": "Cho S. Kim",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha": "^2.1.3"
+  }
 }
