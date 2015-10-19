@@ -1,0 +1,19 @@
+{
+  "name": "lodash",
+  "version": "0.1.0",
+  "description": "A clone of lodash.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "javascript",
+    "lodash"
+  ],
+  "author": "Cho S. Kim",
+  "license": "MIT"
+}
