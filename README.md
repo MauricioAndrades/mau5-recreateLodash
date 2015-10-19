@@ -18,6 +18,7 @@ function forEach(arr, callback) {
 // "one" 0 ["one", "two", "three"]
 // "two" 1 ["one", "two", "three"]
 // "three" 2 ["one", "two", "three"]
+// ["one", "two", "three"]
 forEach(["one", "two", "three"], function(val, index, arr) {
   console.log(val, index, arr);
 });
@@ -29,6 +30,7 @@ forEach(["one", "two", "three"], function(val, index, arr) {
 // "one" 0 ["one", "two", "three"]
 // "two" 1 ["one", "two", "three"]
 // "three" 2 ["one", "two", "three"]
+// ["one", "two", "three"]
 _.forEach(["one", "two", "three"], function(val, index, arr) {
   console.log(val, index, arr);
 });
