@@ -1,7 +1,7 @@
 # lodash
 In this assignment, we want you to re-implement some of the most popular methods found in [lodash][lodash]. This task will provide you two incredible learning opportunities: first, you'll have the opportunity to apply your knowledge of JavaScript; second, you'll learn through this experience that lodash, similar to all JavaScript libraries, are written with the same JavaScript you've been learning!
 
-If you're unfamiliar with lodash, it's [a popular utility library][popular-utility-library] written in JavaScript. Inside of it, you'll find a collection of methods, such as [forEach][for-each], which replaces the boilerplate code that developers often find themselves writing--e.g., code that iterates on every item of a collection. 
+If you're unfamiliar with lodash, it's [a popular utility library][popular-utility-library] written in JavaScript. Inside of it, you'll find a collection of methods, such as [forEach][for-each()], which replaces the boilerplate code that developers often find themselves writing--e.g., code that iterates on every item of a collection. 
 
 Here's an example:
 
@@ -41,7 +41,7 @@ _.forEach(["one", "two", "three"], function(val, index, arr) {
 ## Instructions
 To complete the work in this repository, please follow the following six steps:
 
-### 1 of 6: Fork and Cone
+### 1 of 6: Fork and Clone
 Fork and clone this repository to here: 
 
 ```javascript
@@ -56,7 +56,7 @@ mkdir ~/workspace
 ``` 
 
 ### 2 of 6: Download npm Packages
-This repository contains external libraries, which will enables us to include a test suite. You'll need to navigate to your cloned repository and type the following commands:
+This repository contains external libraries, which will enables us to include a test suite. You'll need to navigate to your cloned repository and type the following command:
 
   ```javascript
   npm install
@@ -81,7 +81,7 @@ After you've created an implementation of a method in `./lodash.js`, type this c
 npm test
 ```
 
-If your implementation is correct, the test you want to pass will change from failing to passing (red to green). This is a good moment to commit your work.
+If your implementation is correct, the test you want to pass will change from failing to passing (i.e., red to green). This is a good moment to commit your work.
 
 ### 5 of 6: Make All Tests Pass
 Repeat the last step until all tests pass. 
