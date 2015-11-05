@@ -29,7 +29,6 @@ describe('#last(array)', function() {
   it('should return the last element of a non-empty array', function() {
     assert.equal(_.last(['first', 'second']), 'second');
   });
-
 });
 
 describe('#takeRight(array, int)', function() {
@@ -80,7 +79,7 @@ describe('#difference', function() {
 describe('#uniq', function() {
 
   it('Create a duplicate free version of the array', function() {
-    assert.deepEqual(_.uniq([2, 1, 2]), [1, 2]);
+    assert.deepEqual(_.uniq([2, 1, 2]), [2, 1]);
     assert.deepEqual(_.uniq([3, 3]), [3]);
   });
 
