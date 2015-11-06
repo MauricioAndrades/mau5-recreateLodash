@@ -4,14 +4,14 @@ var _ = {};
  *************** ARRAYS ***************
  **************************************/
 
-// Returns the first element of an array
+// # first Returns the first element of an array
 _.first = function(arr) {
     // Place your solution here
     return arr[0];
 };
 
-// Returns the first n number of elements in an array.
-// take(array, int) should return int elements from the beginning of the array
+// #take Returns the first n number of elements in an array.
+// #take take(array, int) should return int elements from the beginning of the array
 _.take = function(arr, n) {
     if (n === undefined) {
         n = 1;
@@ -19,34 +19,37 @@ _.take = function(arr, n) {
     return arr.slice(0, n);
 };
 
-// Returns the last element of an array
+// #last Returns the last element of an array
 _.last = function(arr) {
     return arr.pop();
-    // Place your solution here
+// return array[array.length-1];
 };
 
-// Returns the last n number of elements in an array.
+// #take right Returns the last n number of elements in an array.
 _.takeRight = function(arr, n) {
     if (n === undefined) {
         n = 1;
     }
     return arr.slice(-n);
-
+// n = n || 1;
+// var start = array.length -n;
+// if (start < 0 ) {
+    // n = 0
+// }
+//return array.slice(n);
 };
 
-// Creates a new array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+
+// #compact Creates a new array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 // Example:
 // _.compact([0, 1, false, 2, '', 3]);
 // → [1, 2, 3]
 _.compact = function(arr) {
-
     for (var i = 0; i < arr.length; i++) {
         if (!arr[i])
             arr.splice(i, 1);
     }
     return arr;
-
-    // Place your solution here	
 };
 
 // Creates an array of unique array values not included in the other provided arrays
@@ -67,7 +70,7 @@ _.difference = function(arrOne, arrTwo) {
 // → [2, 1]
 _.uniq = function(arr) {
     var r = [];
-    for (i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if (r.indexOf(arr[i]) === -1) {
             r.push(arr[i]);
         }
@@ -77,8 +80,18 @@ _.uniq = function(arr) {
 
 // Returns maximum value in an array
 _.max = function(arr) {
-    return Math.max.apply(null, arr)
+    return Math.max.apply(null, arr);
 };
+
+//or
+
+// for (i = 0; i < arr.length; i++) {
+//     var max = array[0];
+//         for ( var i = 0; i < arr.length; i++) {
+//             if (array[i] > max) {
+//                 max = array[i];
+//         }
+// }
 
 // Returns min value in an array
 _.min = function(arr) {
@@ -90,7 +103,15 @@ _.min = function(arr) {
             return min;
         }
     }
-}
+};
+
+// for (i = 0; i < arr.length; i++) {
+//     var max = array[0];
+//         for ( var i = 0; i < arr.length; i++) {
+//             if (array[i] < max) {
+//                 max = array[i];
+//         }
+// }
 
 // Returns index of matched value, else return -1
 _.indexOf = function(arr, arg) {
@@ -106,12 +127,30 @@ _.indexOf = function(arr, arg) {
 /*************** BONUS ***************/
 // Retuns a new shuffled array
 
+_.shuffle = function(arr) {
+    var cindex = arr.length, tval, rindex;
+    while (0 !== cindex) {
+        rindex = Math.floor(Math.random() * cindex);
+        cindex -= 1;
+        tval = arr[cindex];
+        arr[cindex] = arr[rindex];
+        arr[rindex] = tval;
+    }
+    return arr;
+};
+
 /**************************************
  ************* COLLECTIONS *************
  **************************************/
 // Returns the length of the collection
 _.size = function() {
-    // Place your solution here	
+    //conditional statement
+    if(collection.constructor === Array || collection.constructor === 'string') {
+        len = collection;
+    } else {
+        len = Object.keys(collection);
+    } 
+    return len;
 };
 
 // Iterates on each item of the collection and then returns the original collection
@@ -121,7 +160,7 @@ _.forEach = function(collection, callback) {
         for (var i = 0; i < collection.length; i++) {
             callback(collection[i]);
         }
-    } else z {
+    } else {
         for (var key in collection) {
             callback(collection[key]);
         }
@@ -130,19 +169,24 @@ _.forEach = function(collection, callback) {
 };
 
 // Returns a new array with the filtered items
-_.filter = function() {
-    // Place your solution here	
+_.filter = function(collection, callback) {
+    var r = [];
+        for (i = 0; i < collection.length; i++) {
+            if (callback(collection[i], i, collection));
+        
+
+    return r;
 };
 
 // Returns a new array with the unfiltered items
 _.reject = function() {
-    // Place your solution here	
+    // Place your solution here 
 };
 
 /*************** BONUS ***************/
 // Returns n random items
 _.sample = function() {
-    // Place your solution here	
+    // Place your solution here 
 };
 
 
